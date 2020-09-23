@@ -1,18 +1,18 @@
 import http from '../http-common';
 
-const getAll = () => http.get('/products');
+const getAll = () => http.get('/product');
 
-const get = (id) => http.get(`/products/${id}`);
+const get = (id) => http.get(`/product/${id}`);
 
-const create = (data) => http.post('/products', data);
+const create = (data) => http.post('/product', data);
 
-const update = (id, data) => http.put(`/products/${id}`, data);
+const update = (id, data) => http.put(`/product/${id}`, data);
 
-const remove = (id) => http.delete(`/products/${id}`);
+const remove = (id) => http.delete(`/product/${id}`);
 
-const removeAll = () => http.delete('/products');
+const removeAll = () => http.delete('/product');
 
-const findByName = (name) => http.get(`/products/search/${name}`);
+const findByName = (name) => http.get(`/product/search/${name}`);
 
 export default {
   getAll,

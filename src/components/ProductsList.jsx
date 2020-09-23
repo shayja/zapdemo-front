@@ -33,7 +33,7 @@ const ProductsList = () => {
     setCurrentIndex(index);
   };
 
-  /*
+  
   const refreshList = () => {
     retrieveProducts();
     setCurrentProduct(null);
@@ -50,7 +50,7 @@ const ProductsList = () => {
         console.log(e);
       });
   };
-  */
+  
   const findByName = () => {
     ProductDataService.findByName(searchName)
       // eslint-disable-next-line arrow-parens
@@ -103,13 +103,7 @@ const ProductsList = () => {
             ))}
         </ul>
 
-        {/* <button
-          className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllProducts}
-        >
-          Remove All
-        </button> */}
-
+       
         <button
           type="button"
           className="m-3 btn btn-sm btn-info"
@@ -155,7 +149,19 @@ const ProductsList = () => {
             <p>Please click on a Product...</p>
           </div>
         )}
+
+<button type="button"
+          className="m-3 btn btn-sm btn-danger float-right"
+          onClick={removeAllProducts}
+        >
+          Remove All
+        </button>
       </div>
+
+     
+
+
+
     </div>
   );
 };
